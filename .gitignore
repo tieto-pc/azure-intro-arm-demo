@@ -1,3 +1,8 @@
+
+# NOTE: Do not add the actual parameters file (with secrets), just add the template file.
+arm/vnet-vm-parameters.json
+
+
 # Emacs backups.
 *~
 
