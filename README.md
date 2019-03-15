@@ -91,23 +91,24 @@ NOTE: These instructions are for Linux (most probably should work for Mac as wel
 2. Clone this project: git clone https://github.com/tieto-pc/azure-intro-arm-demo.git
 3. Change directory to: azure-intro-arm-demo/arm
 4. Login to Azure:
-   1. ```az login```.
-   2. ```az account list --output table``` => Check which Azure accounts you have.
-   3. ```az account set -s YOUR-ACCOUNT-ID``` => Set the right azure account. **NOTE**: This is important! Always check which Azure account is your default account so that your demos do not accidentally go to some customer Azure production environment!
+    1. ```az login```.
+    2. ```az account list --output table``` => Check which Azure accounts you have.
+    3. ```az account set -s YOUR-ACCOUNT-ID``` => Set the right azure account. **NOTE**: This is important! Always check which Azure account is your default account so that your demos do not accidentally go to some customer Azure production environment!
 5. Create the ssh key pair as instructed above.
 6. Create the parameters file as instructed above. 
 7. Run command: ./create-resource-group.sh <location> <resource-group-name>
 8. Run command: ./validate-vnet-vm-deployment.sh <resource-group-name>
 9. Run command: ./create-vnet-vm-deployment.sh <resource-group-name> <deployment-name>
 10. Open Azure Portal and browse different views to see what entities were created:
-   1. Find the resource group.
-   2. Click the vnet. Browse subnets etc.
-   3. Click pip => see the public ip of the VM.
-   4. Click vm => Browse different information regarding the VM, e.g. Networking: here you find the firewall definition for ssh we created earlier.
+
+    1. Find the resource group.
+    2. Click the vnet. Browse subnets etc.
+    3. Click pip => see the public ip of the VM.
+    4. Click vm => Browse different information regarding the VM, e.g. Networking: here you find the firewall definition for ssh we created earlier.
 11. Test to get ssh connection to the VM:
-   1. Check the public IP as instructed above using the Azure Portal.
-   2. cd .ssh
-   3. ssh -i vnet-vm ubuntu@IP-NUMBER-HERE
+    1. Check the public IP as instructed above using the Azure Portal.
+    2. cd .ssh
+    3. ssh -i vnet-vm ubuntu@IP-NUMBER-HERE
 12. Finally destroy the infra using ```./delete-resource-group.sh <resource-group-name>``` command. Check manually also using Portal that the command destroyed everything (if the resource group is gone all the resources are gone also). **NOTE**: It is utterly important that you always destroy your infrastructure when you don't need it anymore - otherwise the infra will generate costs to you or to your unit.
 
 
