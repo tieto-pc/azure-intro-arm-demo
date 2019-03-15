@@ -9,8 +9,8 @@
   - [Creating the Parameters File](#creating-the-parameters-file)
   - [ARM Template Structure](#arm-template-structure)
 - [Demonstration Manuscript](#demonstration-manuscript)
-- [Some Observations When Comparing this ARM and previous Terraform Demonstrations](#some-observations-when-comparing-this-arm-and-previous-terraform-demonstrations)
-- [Suggestions How to Continue this Demonstration](#suggestions-how-to-continue-this-demonstration)
+- [Some Observations When Comparing This ARM and previous Terraform Demonstrations](#some-observations-when-comparing-this-arm-and-previous-terraform-demonstrations)
+- [Suggestions How to Continue This Demonstration](#suggestions-how-to-continue-this-demonstration)
 
 
 
@@ -111,12 +111,12 @@ NOTE: These instructions are for Linux (most probably should work for Mac as wel
 12. Finally destroy the infra using ```./delete-resource-group.sh <resource-group-name>``` command. Check manually also using Portal that the command destroyed everything (if the resource group is gone all the resources are gone also). **NOTE**: It is utterly important that you always destroy your infrastructure when you don't need it anymore - otherwise the infra will generate costs to you or to your unit.
 
 
-# Some Observations When Comparing this ARM and previous Terraform Demonstrations
+# Some Observations When Comparing This ARM and previous Terraform Demonstrations
 
 There is one notable difference between this ARM and previous Terraform demonstration: Using Terraform we were able to create the main resource group using Terraform itself. In this ARM demonstration we needed to create the resource group first since the CLI command to deploy the ARM template expected us to provide the resource group that is used in the deployment.
 
 
-# Suggestions How to Continue this Demonstration
+# Suggestions How to Continue This Demonstration
 
 We could add e.g. scale set to this demonstration but let's keep this demonstration as short as possible so that it can be used as an Azure introduction demonstration. If there are some improvement suggestions that our AS developers would like to see in this demonstration let's create other small demonstrations for those purposes, e.g.:
 - Create a custom Linux image that has the Java app baked in.
