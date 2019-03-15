@@ -70,5 +70,10 @@ Copy-paste the ssh key and other paramters to the vnet-vm-parameters.json file.
 
 
 
+TODO: HUOMIOITA:
+
+- Terraform ratkaisussa voi main resource groupin luoda muun terraform -koodin yhteydessä.
+- Azure ARM olettaa, että deploymentin yhteydessä kerrotaan resource group (pitää olla valmiina).
+
 
 
