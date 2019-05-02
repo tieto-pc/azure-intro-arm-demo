@@ -79,6 +79,11 @@
             }
           }
         ]
+      },
+      "tags": {
+         "Deployment": "[variables('deploymentName')]",
+         "Prefix": "[parameters('prefix')]",
+         "Environment": "[parameters('env')]"
       }
     },
     {
@@ -91,6 +96,11 @@
         "dnsSettings": {
           "domainNameLabel": "[parameters('dnsLabelPrefix')]"
         }
+      },
+      "tags": {
+         "Deployment": "[variables('deploymentName')]",
+         "Prefix": "[parameters('prefix')]",
+         "Environment": "[parameters('env')]"
       }
     },
     {
@@ -118,6 +128,11 @@
             }
           }
         ]
+      },
+      "tags": {
+         "Deployment": "[variables('deploymentName')]",
+         "Prefix": "[parameters('prefix')]",
+         "Environment": "[parameters('env')]"
       }
     },
     {
@@ -144,6 +159,11 @@
             }
           }
         ]
+      },
+      "tags": {
+         "Deployment": "[variables('deploymentName')]",
+         "Prefix": "[parameters('prefix')]",
+         "Environment": "[parameters('env')]"
       }
     },
     {
@@ -182,6 +202,11 @@
             }
           ]
         }
+      },
+      "tags": {
+         "Deployment": "[variables('deploymentName')]",
+         "Prefix": "[parameters('prefix')]",
+         "Environment": "[parameters('env')]"
       }
     }
   ],
