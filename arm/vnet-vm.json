@@ -2,6 +2,12 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "prefix": {
+      "type": "string"
+    },
+    "env": {
+      "type": "string"
+    },
     "adminUsername": {
       "type": "string"
     },
@@ -25,18 +31,19 @@
     }
   },
   "variables": {
+    "deploymentName": "[concat(parameters('prefix'), '-', parameters('env'))]",
     "imagePublisher": "Canonical",
     "imageOffer": "UbuntuServer",
-    "nicName": "myVMNic",
+    "nicName": "[concat(variables('deploymentName'), '-nic')]",
     "addressPrefix": "10.60.0.0/16",
-    "subnetName": "Subnet",
+    "subnetName": "[concat(variables('deploymentName'), '-subnet')]",
     "subnetPrefix": "10.60.0.0/24",
-    "networkSecurityGroupName": "myNetworkSecurityGroup",
-    "publicIPAddressName": "myPublicIP",
+    "networkSecurityGroupName": "[concat(variables('deploymentName'), '-nsg')]",
+    "publicIPAddressName": "[concat(variables('deploymentName'), '-pip')]",
     "publicIPAddressType": "Dynamic",
-    "vmName": "MyUbuntuVM",
+    "vmName": "[concat(variables('deploymentName'), '-vm')]",
     "vmSize": "Standard_DS1_v2",
-    "virtualNetworkName": "MyVNET",
+    "virtualNetworkName": "[concat(variables('deploymentName'), '-vnet')]",
     "linuxConfiguration": {
       "disablePasswordAuthentication": true,
       "ssh": {
